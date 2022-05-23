@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
 
-class KimegotoTimelinePage extends StatefulWidget {
-  const KimegotoTimelinePage({Key? key}) : super(key: key);
+class PrivacyPolicyPage extends StatefulWidget {
+  const PrivacyPolicyPage({Key? key}) : super(key: key);
 
   @override
-  State<KimegotoTimelinePage> createState() => _KimegotoTimelinePageState();
+  State<PrivacyPolicyPage> createState() => _PrivacyPolicyPageState();
 }
 
-class _KimegotoTimelinePageState extends State<KimegotoTimelinePage> {
+class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _KimegotoTimelinePageState extends State<KimegotoTimelinePage> {
         elevation: 1,
         backgroundColor: Theme.of(context).canvasColor,
         centerTitle: true,
-        title: const Text('キメゴト。タイムライン'),
+        title: const Text('プライバシーポリシーについて'),
         leading: IconButton(
           onPressed: () => context.go('/'),
           icon: const Icon(Icons.arrow_back_rounded),

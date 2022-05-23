@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
 
-class KimegotoTimelinePage extends StatefulWidget {
-  const KimegotoTimelinePage({Key? key}) : super(key: key);
+class KimegotoResultPage extends StatefulWidget {
+  const KimegotoResultPage({Key? key}) : super(key: key);
 
   @override
-  State<KimegotoTimelinePage> createState() => _KimegotoTimelinePageState();
+  State<KimegotoResultPage> createState() => _KimegotoResultPageState();
 }
 
-class _KimegotoTimelinePageState extends State<KimegotoTimelinePage> {
+class _KimegotoResultPageState extends State<KimegotoResultPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _KimegotoTimelinePageState extends State<KimegotoTimelinePage> {
         elevation: 1,
         backgroundColor: Theme.of(context).canvasColor,
         centerTitle: true,
-        title: const Text('キメゴト。タイムライン'),
+        title: const Text('キメゴト。結果'),
         leading: IconButton(
           onPressed: () => context.go('/'),
           icon: const Icon(Icons.arrow_back_rounded),
