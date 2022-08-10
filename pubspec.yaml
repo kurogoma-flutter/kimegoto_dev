@@ -26,6 +26,9 @@ dependencies:
   image_picker: ^0.8.5+3
   intl: ^0.17.0
   logger: ^1.1.0
+  freezed: ^2.1.0+1
+  freezed_annotation: ^2.1.0
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -35,11 +38,9 @@ dev_dependencies:
   # $ flutter pub pub run flutter_launcher_icons:main
   flutter_launcher_icons: any
   build_runner: 2.2.0
+  # flutter packages pub run build_runner build --delete-conflicting-outputs
   json_serializable: 6.3.1
   json_annotation: 4.6.0
-
-
-
 
 
 flutter:
