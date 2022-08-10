@@ -20,7 +20,7 @@ import 'package:kimegoto_dev/ui/pages/user/user_profile_page.dart';
 
 /// ルーティング設定
 final GoRouter router = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/home',
   errorBuilder: (context, state) => const RouteErrorPage(),
   routes: <GoRoute>[
     //　ホームページ
@@ -29,14 +29,7 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) =>
           const KimegotoHomePage(),
     ),
-    // GoRoute(
-    //   path: '/home/:tab', // ベース：BNBのタブを指定して遷移
-    //   builder: (context, state) {
-    //     // パスパラメータの値を取得するには state.params を使用
-    //     final int tab = int.parse(state.params['tab']!);
-    //     return KimegotoHomePage(tab: tab);
-    //   },
-    // ),
+
     /// キメゴト。関連ページ
     GoRoute(
       path: '/kimegoto/create/pair', // キメゴト。作成：ペア

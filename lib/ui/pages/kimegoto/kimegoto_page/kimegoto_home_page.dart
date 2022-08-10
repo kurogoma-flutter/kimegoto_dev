@@ -17,13 +17,22 @@ class _KimegotoHomePageState extends State<KimegotoHomePage> {
         elevation: 1,
         backgroundColor: Theme.of(context).canvasColor,
         centerTitle: true,
-        title: const Text('トップページ'),
+        title: const Text('トップページ', style: TextStyle(color: Colors.black)),
         leading: IconButton(
-          onPressed: () => context.go('/'),
+          onPressed: () => context.go('/home'),
           icon: const Icon(Icons.arrow_back_rounded),
         ),
       ),
-      body: Container(),
+      body: SizedBox.expand(
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () => context.go('/kimegoto/list'),
+              child: const Text('キメゴトリスト'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
