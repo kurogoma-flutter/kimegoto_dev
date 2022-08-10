@@ -31,6 +31,8 @@ mixin _$KimegotoModel {
       throw _privateConstructorUsedError; // 参加者IDリスト・最大2名
   String get inviteStatus => throw _privateConstructorUsedError; // 招待状況
   String get invitedUserId => throw _privateConstructorUsedError; // 招待されたユーザーID
+  @DeadlineField()
+  DateTime? get deadline => throw _privateConstructorUsedError; // 締切日
   @CreatedAtField()
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @UpdatedAtField()
@@ -58,6 +60,7 @@ abstract class $KimegotoModelCopyWith<$Res> {
       List<String> joinedUserIdList,
       String inviteStatus,
       String invitedUserId,
+      @DeadlineField() DateTime? deadline,
       @CreatedAtField() DateTime? createdAt,
       @UpdatedAtField() DateTime? updatedAt});
 }
@@ -83,6 +86,7 @@ class _$KimegotoModelCopyWithImpl<$Res>
     Object? joinedUserIdList = freezed,
     Object? inviteStatus = freezed,
     Object? invitedUserId = freezed,
+    Object? deadline = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
   }) {
@@ -127,6 +131,10 @@ class _$KimegotoModelCopyWithImpl<$Res>
           ? _value.invitedUserId
           : invitedUserId // ignore: cast_nullable_to_non_nullable
               as String,
+      deadline: deadline == freezed
+          ? _value.deadline
+          : deadline // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -157,6 +165,7 @@ abstract class _$$_KimegotoModelCopyWith<$Res>
       List<String> joinedUserIdList,
       String inviteStatus,
       String invitedUserId,
+      @DeadlineField() DateTime? deadline,
       @CreatedAtField() DateTime? createdAt,
       @UpdatedAtField() DateTime? updatedAt});
 }
@@ -184,6 +193,7 @@ class __$$_KimegotoModelCopyWithImpl<$Res>
     Object? joinedUserIdList = freezed,
     Object? inviteStatus = freezed,
     Object? invitedUserId = freezed,
+    Object? deadline = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
   }) {
@@ -228,6 +238,10 @@ class __$$_KimegotoModelCopyWithImpl<$Res>
           ? _value.invitedUserId
           : invitedUserId // ignore: cast_nullable_to_non_nullable
               as String,
+      deadline: deadline == freezed
+          ? _value.deadline
+          : deadline // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -254,6 +268,7 @@ class _$_KimegotoModel implements _KimegotoModel {
       required final List<String> joinedUserIdList,
       required this.inviteStatus,
       required this.invitedUserId,
+      @DeadlineField() this.deadline,
       @CreatedAtField() this.createdAt,
       @UpdatedAtField() this.updatedAt})
       : _joinedUserIdList = joinedUserIdList;
@@ -298,6 +313,10 @@ class _$_KimegotoModel implements _KimegotoModel {
   final String invitedUserId;
 // 招待されたユーザーID
   @override
+  @DeadlineField()
+  final DateTime? deadline;
+// 締切日
+  @override
   @CreatedAtField()
   final DateTime? createdAt;
   @override
@@ -306,7 +325,7 @@ class _$_KimegotoModel implements _KimegotoModel {
 
   @override
   String toString() {
-    return 'KimegotoModel(kimegotoId: $kimegotoId, title: $title, description: $description, penaltyType: $penaltyType, penalty: $penalty, ownerId: $ownerId, deposit: $deposit, joinedUserIdList: $joinedUserIdList, inviteStatus: $inviteStatus, invitedUserId: $invitedUserId, createdAt: $createdAt, updatedAt: $updatedAt)';
+    return 'KimegotoModel(kimegotoId: $kimegotoId, title: $title, description: $description, penaltyType: $penaltyType, penalty: $penalty, ownerId: $ownerId, deposit: $deposit, joinedUserIdList: $joinedUserIdList, inviteStatus: $inviteStatus, invitedUserId: $invitedUserId, deadline: $deadline, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -330,6 +349,7 @@ class _$_KimegotoModel implements _KimegotoModel {
                 .equals(other.inviteStatus, inviteStatus) &&
             const DeepCollectionEquality()
                 .equals(other.invitedUserId, invitedUserId) &&
+            const DeepCollectionEquality().equals(other.deadline, deadline) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt));
   }
@@ -348,6 +368,7 @@ class _$_KimegotoModel implements _KimegotoModel {
       const DeepCollectionEquality().hash(_joinedUserIdList),
       const DeepCollectionEquality().hash(inviteStatus),
       const DeepCollectionEquality().hash(invitedUserId),
+      const DeepCollectionEquality().hash(deadline),
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt));
 
@@ -376,6 +397,7 @@ abstract class _KimegotoModel implements KimegotoModel {
       required final List<String> joinedUserIdList,
       required final String inviteStatus,
       required final String invitedUserId,
+      @DeadlineField() final DateTime? deadline,
       @CreatedAtField() final DateTime? createdAt,
       @UpdatedAtField() final DateTime? updatedAt}) = _$_KimegotoModel;
 
@@ -403,6 +425,9 @@ abstract class _KimegotoModel implements KimegotoModel {
   @override // 招待状況
   String get invitedUserId;
   @override // 招待されたユーザーID
+  @DeadlineField()
+  DateTime? get deadline;
+  @override // 締切日
   @CreatedAtField()
   DateTime? get createdAt;
   @override

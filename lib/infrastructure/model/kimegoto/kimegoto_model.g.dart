@@ -20,6 +20,7 @@ _$_KimegotoModel _$$_KimegotoModelFromJson(Map<String, dynamic> json) =>
           .toList(),
       inviteStatus: json['inviteStatus'] as String,
       invitedUserId: json['invitedUserId'] as String,
+      deadline: const DeadlineField().fromJson(json['deadline']),
       createdAt: const CreatedAtField().fromJson(json['createdAt']),
       updatedAt: const UpdatedAtField().fromJson(json['updatedAt']),
     );
@@ -36,6 +37,7 @@ Map<String, dynamic> _$$_KimegotoModelToJson(_$_KimegotoModel instance) =>
       'joinedUserIdList': instance.joinedUserIdList,
       'inviteStatus': instance.inviteStatus,
       'invitedUserId': instance.invitedUserId,
+      'deadline': const DeadlineField().toJson(instance.deadline),
       'createdAt': const CreatedAtField().toJson(instance.createdAt),
       'updatedAt': const UpdatedAtField().toJson(instance.updatedAt),
     };

@@ -31,3 +31,18 @@ class UpdatedAtField implements JsonConverter<DateTime?, dynamic> {
     return FieldValue.serverTimestamp();
   }
 }
+
+class DeadlineField implements JsonConverter<DateTime?, dynamic> {
+  const DeadlineField();
+
+  @override
+  DateTime? fromJson(dynamic timestamp) {
+    timestamp as Timestamp?;
+    return timestamp?.toDate();
+  }
+
+  @override
+  FieldValue toJson(DateTime? date) {
+    return FieldValue.serverTimestamp();
+  }
+}

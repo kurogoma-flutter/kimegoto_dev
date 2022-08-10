@@ -18,6 +18,7 @@ abstract class KimegotoModel with _$KimegotoModel {
     required List<String> joinedUserIdList, // 参加者IDリスト・最大2名
     required String inviteStatus, // 招待状況
     required String invitedUserId, // 招待されたユーザーID
+    @DeadlineField() DateTime? deadline, // 締切日
     @CreatedAtField() DateTime? createdAt,
     @UpdatedAtField() DateTime? updatedAt,
   }) = _KimegotoModel;
