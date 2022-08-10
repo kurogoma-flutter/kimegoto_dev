@@ -140,29 +140,6 @@ final GoRouter router = GoRouter(
     ),
 
     /// 規約関連ページ
-    GoRoute(
-      path: '/terms/', // 問合せ
-      builder: (BuildContext context, GoRouterState state) =>
-          const InquiryPage(),
-    ),
-
-    GoRoute(
-      path: '/terms/', // 問合せ
-      builder: (BuildContext context, GoRouterState state) =>
-          const InquiryPage(),
-    ),
-
-    GoRoute(
-      path: '/terms/', // 問合せ
-      builder: (BuildContext context, GoRouterState state) =>
-          const InquiryPage(),
-    ),
-
-    GoRoute(
-      path: '/terms/', // 問合せ
-      builder: (BuildContext context, GoRouterState state) =>
-          const InquiryPage(),
-    ),
 
     // GoRoute(
     //   path: '/chat/:myUid/:friendsUid', // レビュー詳細ページ
