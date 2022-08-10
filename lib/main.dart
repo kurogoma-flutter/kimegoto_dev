@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
-import 'package:kimegoto_dev/services/routes.dart';
+import 'package:kimegoto_dev/utility/routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
-      title: 'レビューアプリ',
+      title: 'キメゴト。dev',
     );
   }
 }
