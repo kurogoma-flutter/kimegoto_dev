@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:kimegoto_dev/utils/router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(
-    const MyApp(),
+    const ProviderScope(child: MyApp()),
   );
 }
 
