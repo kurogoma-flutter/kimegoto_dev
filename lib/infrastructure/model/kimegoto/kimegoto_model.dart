@@ -22,6 +22,55 @@ abstract class KimegotoModel with _$KimegotoModel {
     @CreatedAtField() DateTime? createdAt,
     @UpdatedAtField() DateTime? updatedAt,
   }) = _KimegotoModel;
+
   factory KimegotoModel.fromJson(Map<String, dynamic> json) =>
       _$KimegotoModelFromJson(json);
+
+  factory KimegotoModel.initialData() => KimegotoModel(
+        kimegotoId: '',
+        title: '',
+        description: '',
+        penaltyType: '',
+        penalty: '',
+        ownerId: '',
+        deposit: 0,
+        joinedUserIdList: [],
+        inviteStatus: '',
+        invitedUserId: '',
+        deadline: DateTime.now(),
+        createdAt: DateTime.now(),
+        updatedAt: DateTime.now(),
+      );
+
+  factory KimegotoModel.fromMap(Map<String, dynamic> data) => KimegotoModel(
+        kimegotoId: data['kimegotoId'],
+        title: data['title'],
+        description: data['description'],
+        penaltyType: data['penaltyType'],
+        penalty: data['penalty'],
+        ownerId: data['ownerId'],
+        deposit: data['deposit'],
+        joinedUserIdList: data['joinedUserIdList'],
+        inviteStatus: data['inviteStatus'],
+        invitedUserId: data['invitedUserId'],
+        deadline: DateTime.parse(data['deadline']),
+        createdAt: DateTime.parse(data['createdAt']),
+        updatedAt: DateTime.parse(data['updatedAt']),
+      );
+
+  Map<String, dynamic> toMap() => {
+        'kimegotoId': kimegotoId,
+        'title': title,
+        'description': description,
+        'penaltyType': penaltyType,
+        'penalty': penalty,
+        'ownerId': ownerId,
+        'deposit': deposit,
+        'joinedUserIdList': joinedUserIdList,
+        'inviteStatus': inviteStatus,
+        'invitedUserId': invitedUserId,
+        'deadline': deadline,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
 }

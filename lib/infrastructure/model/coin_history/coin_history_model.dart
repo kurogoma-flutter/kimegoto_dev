@@ -14,6 +14,32 @@ abstract class CoinHistoryModel with _$CoinHistoryModel {
     required final String reason,
     @CreatedAtField() DateTime? createdAt,
   }) = _CoinHistoryModel;
+
   factory CoinHistoryModel.fromJson(Map<String, dynamic> json) =>
       _$CoinHistoryModelFromJson(json);
+
+  factory CoinHistoryModel.initialData() => CoinHistoryModel(
+        userId: '',
+        coin: 0,
+        price: 0,
+        reason: '',
+        createdAt: DateTime.now(),
+      );
+
+  factory CoinHistoryModel.fromMap(Map<String, dynamic> data) =>
+      CoinHistoryModel(
+        userId: data['userId'],
+        coin: data['coin'],
+        price: data['price'],
+        reason: data['reason'],
+        createdAt: DateTime.parse(data['createdAt']),
+      );
+
+  Map<String, dynamic> toMap() => {
+        'userId': userId,
+        'coin': coin,
+        'price': price,
+        'reason': reason,
+        'createdAt': createdAt,
+      };
 }

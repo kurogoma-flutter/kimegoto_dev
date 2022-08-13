@@ -15,6 +15,34 @@ abstract class InquiryModel with _$InquiryModel {
     required String userId, // 投稿者ID
     @CreatedAtField() DateTime? createdAt, // 投稿日時
   }) = _InquiryModel;
+
   factory InquiryModel.fromJson(Map<String, dynamic> json) =>
       _$InquiryModelFromJson(json);
+
+  factory InquiryModel.initialData() => InquiryModel(
+        inquiryId: '',
+        title: '',
+        inquiryType: '',
+        detail: '',
+        userId: '',
+        createdAt: DateTime.now(),
+      );
+
+  factory InquiryModel.fromMap(Map<String, dynamic> data) => InquiryModel(
+        inquiryId: data['inquiryId'],
+        title: data['title'],
+        inquiryType: data['inquiryType'],
+        detail: data['detail'],
+        userId: data['userId'],
+        createdAt: DateTime.parse(data['createdAt']),
+      );
+
+  Map<String, dynamic> toMap() => {
+        'inquiryId': inquiryId,
+        'title': title,
+        'inquiryType': inquiryType,
+        'detail': detail,
+        'userId': userId,
+        'createdAt': createdAt,
+      };
 }
