@@ -54,19 +54,4 @@ abstract class UserModel with _$UserModel {
         createdAt: DateTime.parse(data['createdAt']),
         updatedAt: DateTime.parse(data['updatedAt']),
       );
-
-  Map<String, dynamic> toMap() => {
-        'userId': userId,
-        'userName': userName,
-        'email': email,
-        'iconImagePath': iconImagePath,
-        'area': area,
-        'introduction': introduction,
-        'hobby': hobby,
-        'coin': coin,
-        'point': point,
-        'joinedKimegotoIdList': joinedKimegotoIdList,
-        'createdAt': createdAt,
-        'updatedAt': updatedAt,
-      };
 }

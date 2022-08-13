@@ -34,12 +34,4 @@ abstract class CoinHistoryModel with _$CoinHistoryModel {
         reason: data['reason'],
         createdAt: DateTime.parse(data['createdAt']),
       );
-
-  Map<String, dynamic> toMap() => {
-        'userId': userId,
-        'coin': coin,
-        'price': price,
-        'reason': reason,
-        'createdAt': createdAt,
-      };
 }

@@ -21,6 +21,7 @@ class ConsoleOutput extends LogOutput {
   @override
   void output(OutputEvent event) {
     for (var line in event.lines) {
+      // ignore: avoid_print
       print(line);
     }
   }

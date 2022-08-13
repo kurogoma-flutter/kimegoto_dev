@@ -36,13 +36,4 @@ abstract class InquiryModel with _$InquiryModel {
         userId: data['userId'],
         createdAt: DateTime.parse(data['createdAt']),
       );
-
-  Map<String, dynamic> toMap() => {
-        'inquiryId': inquiryId,
-        'title': title,
-        'inquiryType': inquiryType,
-        'detail': detail,
-        'userId': userId,
-        'createdAt': createdAt,
-      };
 }

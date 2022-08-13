@@ -30,11 +30,4 @@ abstract class CoinModel with _$CoinModel {
         price: data['price'],
         createdAt: DateTime.parse(data['createdAt']),
       );
-
-  Map<String, dynamic> toMap() => {
-        'userId': userId,
-        'coin': coin,
-        'price': price,
-        'createdAt': createdAt,
-      };
 }

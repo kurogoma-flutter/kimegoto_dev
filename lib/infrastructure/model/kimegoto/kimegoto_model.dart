@@ -57,20 +57,4 @@ abstract class KimegotoModel with _$KimegotoModel {
         createdAt: DateTime.parse(data['createdAt']),
         updatedAt: DateTime.parse(data['updatedAt']),
       );
-
-  Map<String, dynamic> toMap() => {
-        'kimegotoId': kimegotoId,
-        'title': title,
-        'description': description,
-        'penaltyType': penaltyType,
-        'penalty': penalty,
-        'ownerId': ownerId,
-        'deposit': deposit,
-        'joinedUserIdList': joinedUserIdList,
-        'inviteStatus': inviteStatus,
-        'invitedUserId': invitedUserId,
-        'deadline': deadline,
-        'createdAt': createdAt,
-        'updatedAt': updatedAt,
-      };
 }
