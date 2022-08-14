@@ -2,7 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:kimegoto_dev/domain/user/user_profile_service.dart';
 import 'package:kimegoto_dev/domain/user/user_profile_state.dart';
 
-final kimegotoHomeNotifierProvider =
+final userProfileNotifierProvider =
     StateNotifierProvider.autoDispose<UserProfileNotifier, UserProfileState>(
         (ref) {
   return UserProfileNotifier(
