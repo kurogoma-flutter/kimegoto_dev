@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kimegoto_dev/infrastructure/model/firebase_timestamp.dart';
+import 'package:uuid/uuid.dart';
 
 part 'kimegoto_model.freezed.dart';
 
@@ -27,7 +28,7 @@ abstract class KimegotoModel with _$KimegotoModel {
       _$KimegotoModelFromJson(json);
 
   factory KimegotoModel.initialData() => KimegotoModel(
-        kimegotoId: '',
+        kimegotoId: const Uuid().v4(),
         title: '',
         description: '',
         penaltyType: '',
